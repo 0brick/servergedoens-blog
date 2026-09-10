@@ -1,0 +1,72 @@
+# Base configuration
+baseURL = 'https://<username>.github.io/' # Passe dies an: z.B. https://<github-user>.github.io/ oder https://<github-user>.github.io/servergedoens/
+locale = 'de-DE'
+defaultContentLanguage = 'de'
+title = 'Servergedöns'
+theme = 'PaperMod'
+
+[pagination]
+  pagerSize = 5
+
+# Suchfunktion Konfiguration für PaperMod (erzeugt JSON Index)
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = 'production'
+  title = 'Servergedöns'
+  description = 'Servergedöns – Notizen, Tutorials und Gedankengänge zu Servern, Linux, Selfhosting und DevOps.'
+  author = 'Servergedöns'
+
+  # Layout & UI
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  # Startseite: Begrüßungsbox (Home-Info Mode)
+  [params.homeInfoParams]
+    Title = "Willkommen auf Servergedöns 🐧"
+    Content = "Ein Blog rund um Server, Linux, Docker, Selfhosting, Heimnetzwerke und alles, was sonst so piept und blinkt."
+
+  # Social Icons (optional - nach Belieben anpassen)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+# Navigationsmenü
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Beiträge"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archiv"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Suche"
+    url = "/search/"
+    weight = 40
