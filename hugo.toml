@@ -1,52 +1,70 @@
 # Base configuration
-baseURL = 'https://<username>.github.io/' # Passe dies an: z.B. https://<github-user>.github.io/ oder https://<github-user>.github.io/servergedoens/
+baseURL = 'https://blog.servergedoens.de/'
 locale = 'de-DE'
 defaultContentLanguage = 'de'
 title = 'Servergedöns'
-theme = 'PaperMod'
+theme = 'no-fate'
+copyright = 'Servergedöns'
+enableRobotsTXT = true
 
 [pagination]
-  pagerSize = 5
+  pagerSize = 10
 
-# Suchfunktion Konfiguration für PaperMod (erzeugt JSON Index)
+# Suchfunktion & Feed-Konfiguration
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [params]
-  env = 'production'
-  title = 'Servergedöns'
-  description = 'Servergedöns – Notizen, Tutorials und Gedankengänge zu Servern, Linux, Selfhosting und DevOps.'
   author = 'Servergedöns'
-
-  # Layout & UI
+  description = 'Servergedöns – Notizen, Tutorials und Bastelprojekte zu Linux, Docker, Selfhosting und Homelabs.'
+  defaultTheme = 'auto'
+  disableThemeToggle = false
   ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
   ShowBreadCrumbs = true
+  ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  ShowWordCount = false
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  comments = false
-  hidemeta = false
-  hideSummary = false
-  showtoc = true
-  tocopen = false
+  ShowShareButtons = false
+  mainSections = ["posts"]
 
-  # Startseite: Begrüßungsbox (Home-Info Mode)
-  [params.homeInfoParams]
-    Title = "Willkommen auf Servergedöns 🐧"
-    Content = "Ein Blog rund um Server, Linux, Docker, Selfhosting, Heimnetzwerke und alles, was sonst so piept und blinkt."
+  [params.label]
+    text = "Servergedöns"
 
-  # Social Icons (optional - nach Belieben anpassen)
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com"
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
+  [params.footer]
+    hideCopyright = false
+    hidePoweredBy = false
+    text = "Verfügbar unter [blog.servergedoens.de](https://blog.servergedoens.de/)"
+
+  [params.noFate]
+    style = "wild"
+    defaultMode = "editorial"
+    defaultAccent = "signal"
+    showThemeToggle = true
+    showSearch = true
+    showReadingTime = true
+    showPropositions = false
+    enableImageProcessing = true
+    validateContentModel = false
+    strictHomeSelections = false
+
+    [params.noFate.wild]
+      masthead = "Blog"
+      issue = ""
+
+    [params.noFate.home]
+      modules = ["opening", "selected_writing"]
+      featuredProposition = ""
+
+    [params.noFate.archive]
+      showArtefactNumbers = false
+      showRights = false
+
+    [params.noFate.images]
+      widths = [480, 800, 1200, 1600]
+      webpQuality = 82
 
 # Navigationsmenü
 [menu]
@@ -70,3 +88,14 @@ theme = 'PaperMod'
     name = "Suche"
     url = "/search/"
     weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    codeFences = true
+    noClasses = false

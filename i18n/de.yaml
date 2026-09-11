@@ -1,0 +1,120 @@
+- id: prev_page
+  translation: "Vorherige"
+
+- id: next_page
+  translation: "Nächste"
+
+- id: read_time
+  translation:
+    one: "1 Minute Lesezeit"
+    other: "{{ .Count }} Minuten Lesezeit"
+
+- id: words
+  translation:
+    one: "Wort"
+    other: "{{ .Count }} Wörter"
+
+- id: toc
+  translation: "Inhaltsverzeichnis"
+
+- id: translations
+  translation: "Übersetzungen"
+
+- id: home
+  translation: "Startseite"
+
+- id: edit_post
+  translation: "Bearbeiten"
+
+- id: code_copy
+  translation: "Kopieren"
+
+- id: code_copied
+  translation: "Kopiert!"
+
+- id: nf_selected_writing
+  translation: "Aktuelle Beiträge"
+
+- id: nf_recent_notes
+  translation: "Neueste Notizen"
+
+- id: nf_primary_navigation
+  translation: "Hauptnavigation"
+
+- id: nf_toggle_theme
+  translation: "Farbschema wechseln"
+
+- id: nf_theme
+  translation: "Design"
+
+- id: nf_home_access_key
+  translation: "Alt + H"
+
+- id: nf_search
+  translation: "Suche"
+
+- id: nf_search_placeholder
+  translation: "Beiträge durchsuchen..."
+
+- id: nf_search_result_count
+  translation: "%d Suchergebnisse"
+
+- id: nf_search_one_result
+  translation: "1 Suchergebnis"
+
+- id: nf_search_no_results
+  translation: "Keine Ergebnisse gefunden"
+
+- id: nf_search_ready
+  translation: "Suche ist bereit"
+
+- id: nf_search_unavailable
+  translation: "Suche vorübergehend nicht verfügbar"
+
+- id: nf_search_requires_js
+  translation: "Die Suche erfordert aktiviertes JavaScript."
+
+- id: nf_search_results
+  translation: "Suchergebnisse"
+
+- id: nf_rss_feed
+  translation: "RSS-Feed"
+
+- id: nf_pagination
+  translation: "Seitennavigation"
+
+- id: nf_chronological_index
+  translation: "Alle Beiträge im Überblick"
+
+- id: nf_featured
+  translation: "Hervorgehoben"
+
+- id: nf_draft
+  translation: "Entwurf"
+
+- id: nf_back_to_top
+  translation: "Nach oben"
+
+- id: nf_powered_by
+  translation: "Erstellt mit"
+
+- id: nf_external_link
+  translation: "Externer Link"
+
+- id: nf_type
+  translation: "Kategorie"
+
+- id: nf_status
+  translation: "Status"
+
+- id: nf_period
+  translation: "Zeitraum"
+
+- id: nf_location
+  translation: "Ort"
+
+- id: nf_source
+  translation: "Quelle"
+
+- id: nf_rights
+  translation: "Lizenz"
